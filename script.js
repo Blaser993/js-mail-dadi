@@ -12,12 +12,21 @@ console.log(mails);
 let yourMail = prompt("Inserisci la tua mail");
 console.log(yourMail)
 
-for (let i = 0; i < mails.length; i++) {
+for (let i = 0; (i < mails.length || i == yourMail) ; i++) {
 
 
-    let mailRegistered = i
-    console.log(mails[mailRegistered]);
+    let mailRegistered = mails[i]
+    console.log(mails[i]);
 
+    
+
+    if (mailRegistered === yourMail) {
+
+        console.log("La tua mail è valida")
+        alert("la tua mail è valida")
+
+    }  else console.log("La mail inserita non è valida, riprovare")
+    alert("la tua mail non è valida, riprovare")
 
 }
 
