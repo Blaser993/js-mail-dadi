@@ -10,25 +10,28 @@ const mails = ["corrado_depinto@virgilio.it" , "corradodepinto.design@gmail.com"
 console.log(mails);
 
 let yourMail = prompt("Inserisci la tua mail");
-console.log(yourMail)
-
-for (let i = 0; (i < mails.length || i == yourMail) ; i++) {
 
 
+let mailConfirmed = false
+
+for (let i = 0; i < mails.length  ; i++) {  
     let mailRegistered = mails[i]
-    console.log(mails[i]);
-
-    
 
     if (mailRegistered === yourMail) {
-
-        console.log("La tua mail è valida")
-        alert("la tua mail è valida")
-
-    }  else console.log("La mail inserita non è valida, riprovare")
-    alert("la tua mail non è valida, riprovare")
+        mailConfirmed = true;   
+    } 
 
 }
+
+if (mailConfirmed == true) {
+    console.log("la tua mail è valida");
+    
+} else {
+    console.log("La mail inserita non è valida, riprovare")
+    alert("La mail inserita non è valida, riprovare")
+    prompt("Inserisci la tua mail");
+}
+     
 
 // Gioco dei dadi
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
