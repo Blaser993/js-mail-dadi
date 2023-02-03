@@ -11,13 +11,20 @@ let playerDado
 
 let computerDado
 
-const resultPlayer = Math.floor(Math.random(dado) * dado.length);
-const resultComputer = Math.floor(Math.random(dado) * dado.length);
+const resultPlayer = Math.floor(Math.random(dado) * dado.length );
+const resultComputer = Math.floor(Math.random(dado) * dado.length );
 
 
 playerDado = resultPlayer
-console.log(playerDado);
+console.log("il tuo numero è " + playerDado);
 
 computerDado = resultComputer
-console.log(computerDado);
+console.log("il numero del computer è " + computerDado);
 
+if(playerDado > computerDado){
+    console.log("hai vinto")
+
+} else if (playerDado < computerDado) {
+    console.log("hai perso")
+
+}   else console.log("pareggio")
