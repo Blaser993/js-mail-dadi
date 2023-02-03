@@ -11,8 +11,8 @@ let playerDado
 
 let computerDado
 
-const resultPlayer = Math.floor(Math.random(dado) * dado.length );
-const resultComputer = Math.floor(Math.random(dado) * dado.length );
+const resultPlayer = Math.floor(Math.random(dado) * (dado.length ) +1);
+const resultComputer = Math.floor(Math.random(dado) * (dado.length ) +1);
 
 
 playerDado = resultPlayer
